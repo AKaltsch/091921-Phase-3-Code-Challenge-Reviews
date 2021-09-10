@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     end
 
     def favorite_product 
-        all_ratings = self.reviews.map(&:star_rating)
-        all_ratings.max
+        # all_ratings = self.reviews.map(&:star_rating)
+        self.products.sort_by {|product| product.reviews.map(&:star_rating)}
     end
 end

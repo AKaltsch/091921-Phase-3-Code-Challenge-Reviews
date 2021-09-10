@@ -62,4 +62,4 @@ puts user3.remove_reviews(product4)
 puts "# I can see in the data table that the review was removed"
 puts 
 puts "favorite_product test..."
-puts user1.favorite_product
+puts user1.favorite_product.last
